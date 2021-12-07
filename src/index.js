@@ -8,7 +8,7 @@ import App from "./App";
 import Expenses from "./routes/expenses";
 import Invoices from "./routes/invoices";
 import Home from "./routes/home";
-import "./css/index.css"
+import './index.css';
 
 
 const rootElement = document.getElementById("root");

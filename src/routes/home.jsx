@@ -6,16 +6,41 @@ import React from "react"
 export default function Home() {
     return (
         <main>
-        <div className="topContainer">
+        <div className="flex h-20 bg-blue-400">
           <Header className="mainHeader" companyName='Forte'/>
-          <SectionButton href="/#section2" className="home" directName="Home"/>
-          <SectionButton className="products" directName="Products"/>
-          <SectionButton className="socials" directName="Socials"/>
+          <div className="md:flex items-center space-x-8 hidden m-auto">
+            <SectionButton className="prod" directName="Home"/>
+            <SectionButton className="products" directName="Products"/>
+            <SectionButton className="socials" directName="Socials"/>
+          </div>
         </div>
         
-        <div className="page3" id="section2">
+        <div className="h-96 text-green-300" id="section2 ">
           hi
         </div>
         </main>
+
+        
     )
   }
+
+  const callback = function (entries) {
+    entries.forEach((entry) => {
+      console.log(entry);
+  
+      if (entry.isIntersecting) {
+        entry.target.classList.add("animate-fadeIn");
+      } else {
+        entry.target.classList.remove("animate-fadeIn");
+      }
+    });
+  };
+  
+  const observer = new IntersectionObserver(callback);
+  
+  const targets = document.querySelectorAll(".js-show-on-scroll");
+  targets.forEach(function (target) {
+    target.classList.add("opacity-0");
+    observer.observe(target);
+  });
+  
