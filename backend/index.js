@@ -9,8 +9,7 @@ app.use(cors())
 app.use(bodyParser.json())
 
 app.get('/', (req, res) => {
-    res.send('Hello World!')
-    console.log(req.headers)
+    res.send('products')
 })
 
 app.listen(apiPort, () => console.log(`Server running on port ${apiPort}`))

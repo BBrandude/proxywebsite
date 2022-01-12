@@ -1,12 +1,13 @@
 import Header from "../componenets/Header"
 import SectionButton from '../componenets/SectionButton';
-//import logo from './logo.svg';
+import aqua from './aqua.svg';
 import React from "react"
 
 export default function Home() {
     return (
         <main>
-        <div className="flex h-20 bg-blue-400">
+        <div className="flex h-40 bg-blue-400">
+        <img src={aqua} width="150" height="150" alt="Flowers in Chania"/>
           <Header className="mainHeader" companyName='Forte'/>
           <div className="md:flex items-center space-x-8 hidden m-auto">
             <SectionButton className="prod" directName="Home"/>
