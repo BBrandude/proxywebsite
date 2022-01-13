@@ -10,8 +10,8 @@ export default function Home() {
           <a className="flex items-stretch" href="./">
           <img src={insomnia} alt="logo" class="resize h-28 w-28 " />
           </a>
-          <div className="font-mono"><h1 classname="font-mono"> Insomnia Labs</h1></div>
-        <div className="md:flex items-center space-x-8 hidden m-auto w-1/5">
+          <div className="font-mono text-2xl font-medium"><h1 classname="font-mono"> Insomnia Labs</h1></div>
+        <div className="md:flex items-center space-x-8 hidden m-auto w-2/6">
           <SectionButton className="text-white" directName="Home" />
           <SectionButton className="text-white" directName="Products" />
           <SectionButton className="text-white" directName="Socials" />
