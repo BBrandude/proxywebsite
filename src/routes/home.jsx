@@ -6,8 +6,11 @@ import React from "react"
 export default function Home() {
   return (
     <main>
-      <div className="flex items-center h-40 bg-black">
+      <div className="flex items-center h-40 bg-black text-white">
+          <a className="flex items-stretch" href="./">
           <img src={insomnia} alt="logo" class="resize h-28 w-28 " />
+          </a>
+          <h1 classname="" href="./"> Insomnia Labs</h1>
         <div className="md:flex items-center space-x-8 hidden m-auto w-1/5">
           <SectionButton className="text-white" directName="Home" />
           <SectionButton className="text-white" directName="Products" />
