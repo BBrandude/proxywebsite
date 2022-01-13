@@ -8,7 +8,8 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cors())
 app.use(bodyParser.json())
 
-app.get('/', (req, res) => {
+app.post('/', (req, res) => {
+    console.log(req.body)
     res.send('products')
 })
 

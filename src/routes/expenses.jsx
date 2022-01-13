@@ -4,24 +4,23 @@ import axios from "axios";
 function Quotes() {
   
   const [text, setText] = useState("");
-  const [author, setAuthor] = useState("");
 
   useEffect(() => {
-    getQuote()
+    axios.post("http://localhost:3001", {user: navigator.userAgent} ).then(response => {
+      console.log(response)
+    });
     
   });
 
 
-  function getQuote() {
-    axios.get("http://localhost:3001/",  { crossdomain: true }).then(response => {
-      setText(response.data);
-      setAuthor(response.data);
-    });
-  }
+  // function getQuote() {
+  //   axios.get("http://localhost:3002").then(response => {
+  //     setText(response.data);
+  //   });
+  // }
 return (
     <div>
       <h1>{text}</h1>
-      <h3>{"-" + author}</h3>
     </div>
   )
 }
