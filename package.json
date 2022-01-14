@@ -19,6 +19,7 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
+    "devStart": "nodemon ./backend/index.js",
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
@@ -44,6 +45,8 @@
   },
   "devDependencies": {
     "autoprefixer": "^9.8.8",
+    "dotenv": "^11.0.0",
+    "nodemon": "^2.0.15",
     "postcss": "^7.0.39",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17"
   }
