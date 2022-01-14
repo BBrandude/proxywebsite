@@ -3,24 +3,35 @@ import axios from "axios";
 
 function Quotes() {
   
-  const [text, setText] = useState("");
+
+
+  const [email, setEmail] = useState('')
 
   useEffect(() => {
-    axios.post("http://localhost:3001", {user: navigator.userAgent} ).then(response => {
-      console.log(response)
-    });
+    // axios.post("http://localhost:3001", {user: navigator.userAgent} ).then(response => {
+    //   console.log(response)
+    // });
     
   });
+  
+  
 
-
-  // function getQuote() {
-  //   axios.get("http://localhost:3002").then(response => {
-  //     setText(response.data);
-  //   });
-  // }
+  
 return (
     <div>
-      <h1>{text}</h1>
+     <form onSubmit={function(){
+        axios.post("http://localhost:3001", {email: email})
+     }}>
+        
+          Email:
+          <input type="text" name="email" onChange={(e) => setEmail(e.target.value)}/>
+          Password:
+          <input type="text" name="hi"/>
+        <input type="submit" value="Submit" />
+      </form>
+
+
+ 
     </div>
   )
 }
