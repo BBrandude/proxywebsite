@@ -6,7 +6,7 @@ import React from "react"
 export default function Home() {
   return (
     <main>
-      <div className="flex items-center h-40 bg-black text-white">
+      <div className="flex items-center h-1/4 bg-black text-white">
         <a className="static left-3 flex items-stretch w-1/12" href="./">
           <img src={insomnia} alt="logo" class="resize h-28 w-28 " />
         </a>
@@ -15,6 +15,12 @@ export default function Home() {
           <SectionButton className="text-white" directName="Home" />
           <SectionButton className="text-white" directName="Products" />
           <SectionButton className="text-white" directName="Socials" />
+        </div>
+      </div>
+      <div className="bg-blue-500 h-screen">
+        <div>
+          <SectionButton className="text-white" directName="Home" />
+          <SectionButton className="text-white" directName="Products" />
         </div>
       </div>
     </main>
