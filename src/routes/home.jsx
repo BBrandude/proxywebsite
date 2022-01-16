@@ -8,11 +8,11 @@ export default function Home() {
     <div>
       <div className="h-screen">
         <div className="flex items-center bg-black text-white h-1/6">
-          <a className="static left-3 flex items-stretch w-56" href="./">
+          <a className="static left-3 flex items-stretch w-50" href="./">
             <img src={insomnia} alt="logo" class="resize h-28 w-28 " />
           </a>
           <div className="font-mono text-2xl font-medium"><h1 classname="font-mono"> Insomnia Labs</h1></div>
-          <div className="md:flex items-center space-x-8 hidden m-auto w-2/6">
+          <div className="md:flex items-center space-x-20 hidden m-auto w-2/6">
             <SectionButton className="text-white" directName="Home" />
             <SectionButton className="text-white" directName="Products" />
             <SectionButton className="text-white" directName="Socials" />
@@ -20,8 +20,8 @@ export default function Home() {
         </div>
         <div className="flex bg-black h-5/6">
           <div className="md:flex items-center space-x-8 m-auto relative bottom-32 ">
-            <SectionButton className="flex justify-center items-center py-3 px-6 w-full font-medium text-white bg-gradient-to-t from-green-600 to-purple-500 rounded-full hover:opacity-75 md:w-auto" directName="Purchase" />
-            <SectionButton className="flex justify-center items-center py-3 px-6 w-full font-medium text-white bg-gradient-to-t from-purple-600 to-purple-500 rounded-full hover:opacity-75 md:w-auto" directName="Dashboard" />
+            <SectionButton className="flex justify-center items-center py-3 px-6 w-full font-medium bg-cyan-400 rounded-full hover:opacity-75 md:w-auto" directName="Purchase" />
+            <SectionButton className="flex justify-center items-center py-3 px-6 w-full font-medium bg-cyan-400 rounded-full hover:opacity-75 md:w-auto" directName="Dashboard" />
           </div>
         </div>
       </div>
