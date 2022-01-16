@@ -20,7 +20,7 @@ export default function Home() {
         </div>
         <div className="flex bg-black h-5/6">
           <div className="md:flex items-center space-x-8 m-auto relative bottom-32 ">
-            <SectionButton className="flex justify-center items-center py-3 px-6 w-full font-medium bg-cyan-400 rounded-full hover:opacity-75 md:w-auto" directName="Purchase" />
+            <SectionButton href="https://shoppy.gg/product/7mJJIsh" className="flex justify-center items-center py-3 px-6 w-full font-medium bg-cyan-400 rounded-full hover:opacity-75 md:w-auto" directName="Purchase" />
             <SectionButton className="flex justify-center items-center py-3 px-6 w-full font-medium bg-cyan-400 rounded-full hover:opacity-75 md:w-auto" directName="Dashboard" />
           </div>
         </div>
