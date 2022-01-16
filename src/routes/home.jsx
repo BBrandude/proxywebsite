@@ -1,27 +1,36 @@
 import Header from "../componenets/Header"
 import SectionButton from '../componenets/SectionButton';
 import insomnia from './insomnia.svg';
+import discord from './discord.svg'
 import React from "react"
 
 export default function Home() {
   return (
     <div>
       <div className="h-screen">
-        <div className="flex items-center bg-black text-white h-1/6">
-          <a className="static left-3 flex items-stretch w-50" href="./">
-            <img src={insomnia} alt="logo" class="resize h-28 w-28 " />
-          </a>
-          <div className="font-mono text-2xl font-medium"><h1 classname="font-mono"> Insomnia Labs</h1></div>
-          <div className="md:flex items-center space-x-20 hidden m-auto w-2/6">
+        <nav className="flex-grow flex items-center scroll bg-black text-white h-min-1/6">
+          <div className="flex items-center ml-8">
+            <a className="static items-stretch " href="./">
+              <img src={insomnia} alt="logo" class="resize h-28 w-28" />
+            </a>
+            <div className="font-mono text-2xl font-medium"><h1 classname="font-mono"> Insomnia Labs</h1></div>
+          </div>
+          <div className="hidden lg:inline-block lg:space-x-28 lg:m-auto lg:pr-80">
             <SectionButton className="text-white" directName="Home" />
             <SectionButton className="text-white" directName="Products" />
             <SectionButton className="text-white" directName="Socials" />
           </div>
-        </div>
-        <div className="flex bg-black h-5/6">
-          <div className="md:flex items-center space-x-8 m-auto relative bottom-32 ">
-            <SectionButton href="https://shoppy.gg/product/7mJJIsh" className="flex justify-center items-center py-3 px-6 w-full font-medium bg-cyan-400 rounded-full hover:opacity-75 md:w-auto" directName="Purchase" />
-            <SectionButton className="flex justify-center items-center py-3 px-6 w-full font-medium bg-cyan-400 rounded-full hover:opacity-75 md:w-auto" directName="Dashboard" />
+          <div>
+            <a href="./" class="flex items-center absolute right-6 top-8 space-x-3 lg:pr-52">
+              <img src={discord} alt="discordLogo" class="resize h-12 w-12"></img> <p>Join Server</p>
+            </a>
+          </div>
+        </nav>
+        
+        <div className="flex bg-black h-screen">
+          <div className="flex items-center space-x-14 m-auto relative bottom-32 ">
+            <SectionButton href="https://shoppy.gg/product/7mJJIsh" className="flex justify-center items-center py-4 px-14 w-full font-medium bg-neon-blue rounded-full hover:opacity-75 md:w-auto" directName="Purchase" />
+            <SectionButton className="flex justify-center items-center py-4 px-14 w-full font-medium bg-neon-blue rounded-full hover:opacity-75 md:w-auto" directName="Dashboard" />
           </div>
         </div>
       </div>
