@@ -5,6 +5,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      height: {
+        '1080': '1080px',
+      },
       colors: {
         'neon-blue': "#2dfcfc",
          cyan: colors.cyan,
