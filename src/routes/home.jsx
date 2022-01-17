@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div>
       <div className="h-1080 resize-none">
-        <div className="flex-grow flex items-center scroll bg-black text-white h-1/6 w-screen">
+        <div className="flex-grow flex items-center scroll bg-black text-white h-1/6">
           <div className="flex items-center ml-8 item-">
             <a className="static items-stretch " href="./">
               <img src={insomnia} alt="logo" class="resize h-28 w-28" />
