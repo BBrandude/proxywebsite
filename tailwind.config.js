@@ -5,6 +5,10 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      backgroundImage: {
+        'bluesmoke': "url('/src/routes/bluesmoke.jpg')",
+        'bluegradient': "url('/src/routes/blackmodern.webp')"       
+      },
       height: {
         '1080': '1080px',
       },

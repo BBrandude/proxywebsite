@@ -27,7 +27,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 gap-4 place-content-center bg-black h-5/6">
+        <div className="bg-bluegradient grid grid-cols-1 gap-4 place-content-center bg-black h-5/6">
           <div className="flex items-center space-x-14 m-auto relative bottom-32 ">
             <SectionButton href="https://shoppy.gg/product/7mJJIsh" className="flex justify-center items-center py-4 px-14 w-full font-medium bg-neon-blue rounded-full hover:opacity-75 md:w-auto" directName="Purchase" />
             <SectionButton className="flex justify-center items-center py-4 px-14 w-full font-medium bg-neon-blue rounded-full hover:opacity-75 md:w-auto" directName="Dashboard" />
