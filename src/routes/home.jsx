@@ -1,7 +1,7 @@
 import Header from "../componenets/Header"
 import SectionButton from '../componenets/SectionButton';
 import insomnia from './insomnia.svg';
-import discord from './discord.svg'
+import discord from './discord.png'
 import React from "react"
 
 export default function Home() {
