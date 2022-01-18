@@ -5,7 +5,14 @@ import discord from '../images/discord.png'
 import React from "react"
 import Product from '../componenets/Product'
 
-export default function Home() {
+
+let product1description = 
+`US Edu Gmail hi
+Hello World
+Suck my balls
+Cock`
+
+export default function Home() { 
   return (
     <div>
       <div className="h-1080 resize-none">
@@ -36,7 +43,7 @@ export default function Home() {
         </div>
       </div>
       <div className="h-screen bg-blue-400">
-        <Product></Product>
+        <Product productName={"Prime US Edu Gmail"} price={"$2.75/email"} desc={product1description}/>
       </div>
     </div>
 
