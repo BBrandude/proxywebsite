@@ -1,8 +1,9 @@
 import Header from "../componenets/Header"
 import SectionButton from '../componenets/SectionButton';
-import insomnia from './insomnia.svg';
-import discord from './discord.png'
+import insomnia from '../images/insomnia.svg';
+import discord from '../images/discord.png'
 import React from "react"
+import Product from '../componenets/Product'
 
 export default function Home() {
   return (
@@ -27,14 +28,16 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="bg-bluegradient grid grid-cols-1 gap-4 place-content-center bg-black h-5/6">
+        <div className= "grid grid-cols-1 gap-4 place-content-center bg-black h-5/6">
           <div className="flex items-center space-x-14 m-auto relative bottom-32 ">
             <SectionButton href="https://shoppy.gg/product/7mJJIsh" className="flex justify-center items-center py-4 px-14 w-full font-medium bg-neon-blue rounded-full hover:opacity-75 md:w-auto" directName="Purchase" />
             <SectionButton className="flex justify-center items-center py-4 px-14 w-full font-medium bg-neon-blue rounded-full hover:opacity-75 md:w-auto" directName="Dashboard" />
           </div>
         </div>
       </div>
-      <div className="h-screen bg-blue-400"></div>
+      <div className="h-screen bg-blue-400">
+        <Product></Product>
+      </div>
     </div>
 
 
