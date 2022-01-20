@@ -2,11 +2,6 @@ import React from 'react'
 import insomnia from '../images/insomnia.svg'
 
 const product = ({productName, price, desc}) => {
-    let description = desc.split("\n");
-    let list = [];
-    for(let line of description) {
-        list.push(<li>{line}</li>)
-    }
     return (
         <div className='bg-white rounded-2xl h-96 w-96'>
              <div className="flex flex-row pl-5 pt-5">
@@ -19,10 +14,18 @@ const product = ({productName, price, desc}) => {
                     
 
                 </div>
-                
-                <ul className="list-disc pl-8">{list}</ul>
+                <div className="">
+                    <p>{desc}</p>
+                </div>
              </div>
     )
 }
 
 export default product
+
+/*
+let description = desc.split("\n");
+    let list = [];
+    for(let line of description) {
+        list.push(<li>{line}</li>)
+*/

@@ -6,11 +6,7 @@ import React from "react"
 import Product from '../componenets/Product'
 
 
-let product1description = 
-`US Edu Gmail hi
-Hello World
-Suck my balls
-Cock`
+let product1description = `Fresh United States Edu Gmail `
 
 export default function Home() { 
   return (
@@ -24,9 +20,9 @@ export default function Home() {
             <div className="font-mono text-2xl font-medium"><h1 classname="font-mono"> Insomnia Labs</h1></div>
           </div>
           <div className="hidden lg:inline-block lg:space-x-28 lg:m-auto lg:pr-80">
-            <SectionButton className="text-white" directName="Home" />
-            <SectionButton className="text-white" directName="Products" />
-            <SectionButton className="text-white" directName="Socials" />
+            <SectionButton className="text-white font-bold" directName="Home" />
+            <SectionButton className="text-white font-bold" directName="Products" />
+            <SectionButton className="text-white font-bold" directName="Socials" />
           </div>
           <div className="absolute right-0">
             <a href="./" class="flex items-center space-x-3 lg:pr-52">
@@ -43,7 +39,15 @@ export default function Home() {
         </div>
       </div>
       <div className="h-screen bg-blue-400">
+        <div className="flex flex-wrap mx-6">
         <Product productName={"Prime US Edu Gmail"} price={"$2.75/email"} desc={product1description}/>
+        <Product productName={"Prime US Edu Gmail"} price={"$2.75/email"} desc={product1description}/>
+        <Product productName={"Prime US Edu Gmail"} price={"$2.75/email"} desc={product1description}/>
+        <Product productName={"Prime US Edu Gmail"} price={"$2.75/email"} desc={product1description}/>
+        <Product productName={"Prime US Edu Gmail"} price={"$2.75/email"} desc={product1description}/>
+        <Product productName={"Prime US Edu Gmail"} price={"$2.75/email"} desc={product1description}/>
+        </div>
+        
       </div>
     </div>
 
