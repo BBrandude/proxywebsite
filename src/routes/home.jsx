@@ -8,7 +8,7 @@ import Product from '../componenets/Product'
 
 let product1description = `Fresh United States Edu Gmail `
 
-export default function Home() { 
+export default function Home() {
   return (
     <div>
       <div className="h-1080 resize-none">
@@ -31,23 +31,23 @@ export default function Home() {
           </div>
         </div>
 
-        <div className= "grid grid-cols-1 gap-4 place-content-center bg-black h-5/6">
+        <div className="grid grid-cols-1 gap-4 place-content-center bg-black h-5/6">
           <div className="flex items-center space-x-14 m-auto relative bottom-32 ">
             <SectionButton href="https://shoppy.gg/product/7mJJIsh" className="flex justify-center items-center py-4 px-14 w-full font-medium bg-neon-blue rounded-full hover:opacity-75 md:w-auto" directName="Purchase" />
             <SectionButton className="flex justify-center items-center py-4 px-14 w-full font-medium bg-neon-blue rounded-full hover:opacity-75 md:w-auto" directName="Dashboard" />
           </div>
         </div>
       </div>
-      <div className="h-screen bg-blue-400">
-        <div className="flex flex-wrap mx-6">
-        <Product productName={"Prime US Edu Gmail"} price={"$2.75/email"} desc={product1description}/>
-        <Product productName={"Prime US Edu Gmail"} price={"$2.75/email"} desc={product1description}/>
-        <Product productName={"Prime US Edu Gmail"} price={"$2.75/email"} desc={product1description}/>
-        <Product productName={"Prime US Edu Gmail"} price={"$2.75/email"} desc={product1description}/>
-        <Product productName={"Prime US Edu Gmail"} price={"$2.75/email"} desc={product1description}/>
-        <Product productName={"Prime US Edu Gmail"} price={"$2.75/email"} desc={product1description}/>
+      <div className="bg-blue-400">
+        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mx-6 justify-center">
+          <Product productName={"Prime US Edu Gmail"} price={"$2.75/email"} desc={product1description} />
+          <Product productName={"Prime US Edu Gmail"} price={"$2.75/email"} desc={product1description} />
+          <Product productName={"Prime US Edu Gmail"} price={"$2.75/email"} desc={product1description} />
+          <Product productName={"Prime US Edu Gmail"} price={"$2.75/email"} desc={product1description} />
+          <Product productName={"Prime US Edu Gmail"} price={"$2.75/email"} desc={product1description} />
+          <Product productName={"Prime US Edu Gmail"} price={"$2.75/email"} desc={product1description} />
         </div>
-        
+
       </div>
     </div>
 

@@ -1,23 +1,23 @@
 import React from 'react'
 import insomnia from '../images/insomnia.svg'
 
-const product = ({productName, price, desc}) => {
+const product = ({ productName, price, desc }) => {
     return (
-        <div className='bg-white rounded-2xl h-96 w-96'>
-             <div className="flex flex-row pl-5 pt-5">
-                    <div><img src={insomnia} className="rounded-xl resize h-20 w-20" alt="logo"></img></div>
-                    
-                    <div className="flex-col pl-5">
-                        <h1>{productName}</h1>
-                        <h3 className="pt-3">{price}</h3>
-                    </div>
-                    
+        <div className='flex flex-col bg-white rounded-2xl h-96 p-5 space-y-5'>
+            <div className="flex flex-row">
+                <img src={insomnia} className="rounded-xl resize h-20 w-20" alt="logo"></img>
 
+                <div className="flex flex-col pl-5">
+                    <h1>{productName}</h1>
+                    <h3 className="pt-3">{price}</h3>
                 </div>
-                <div className="">
-                    <p>{desc}</p>
-                </div>
-             </div>
+
+
+            </div>
+            <div className="">
+                <p>{desc}</p>
+            </div>
+        </div>
     )
 }
 
