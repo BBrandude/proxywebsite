@@ -25,8 +25,32 @@ function getVideoCardInfo() {
 
 
 export default async function antibot() {
+    //GPU
     let graphicsCardModel = await getVideoCardInfo().renderer
     let graphicsCardVendor = await getVideoCardInfo().vendor
-    return({gpuModel: graphicsCardModel, gpuVendor: graphicsCardVendor})
+    
+    //Navigator
+    let userAgentIndentifier = navigator.userAgent;
+    let isWebDriver = navigator.webdriver;
+
+    //Window
+    let screenHeight = window.screen.height
+    let screenWidth = window.screen.width
+    let screenPixelDepth = window.screen.pixelDepth
+
+    return({
+        //gpu
+        gpuModel: graphicsCardModel, 
+        gpuVendor: graphicsCardVendor,
+        
+        //navigator
+        naviagtorUserAgent: userAgentIndentifier,
+        naviagtorwebDriver: isWebDriver, 
+
+        //window
+        windowScreenHeigh: screenHeight,
+        windowScreenWidth: screenWidth,
+        windowscreenPixelDepth: screenPixelDepth
+    })
 }
 

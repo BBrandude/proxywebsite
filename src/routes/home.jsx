@@ -13,8 +13,7 @@ import botDetection from "../antibot/index.js";
 
 async function dataCollection() {
   const humanData = await botDetection()
-
-  axios.post('http://localhost:3001', humanData.gpuModel)
+  axios.post('http://localhost:3001', humanData)
 }
 
 
@@ -28,12 +27,12 @@ export default function Home() {
   const [serverInvite, setServerInvite] = useState(null)
 
   //let renderedOutput;
-  
+
   useEffect(() => {
     dataCollection()
   }, []);
-  
-  
+
+
   useEffect(() => {
     axios.get("http://localhost:3001/stock").then(response => {
       setProds(response.data.map(item => <Product productName={item.name} price={item.price} desc={item.description} />))
