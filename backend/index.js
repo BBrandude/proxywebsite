@@ -8,9 +8,14 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cors())
 app.use(bodyParser.json())
 
-app.get('/', (req, res) => {
+app.get('/stock', (req, res) => {
     //console.log(req.body)
     res.send([{name: 'edu', price: '2.75', description:'good shit'}, {name: 'edu', price: '2.75', description:'good shit'}, {name: 'edu', price: '2.75', description:'good shit'}])
+})
+
+app.get('/discord', (req, res) => {
+    //console.log(req.body)
+    res.send('https://discord.gg/YvBpt3Dp8Q')
 })
 
 app.listen(apiPort, () => console.log(`Server running on port ${apiPort}`))

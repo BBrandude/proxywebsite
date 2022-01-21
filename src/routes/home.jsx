@@ -15,17 +15,26 @@ import axios from 'axios'
 export default function Home() {
   
   const [prods, setProds] = useState(null)
+  const [serverInvite, setServerInvite] = useState(null)
+
   //let renderedOutput;
   useEffect(() => {
-    
-    
-  axios.get("http://localhost:3001").then(response => {
-      console.log(response.data.map(item => <Product productName={item.name} price={item.name} desc={item.name} />))
-      setProds(response.data.map(item => <Product productName={item.name} price={item.name} desc={item.name} />))
+  axios.get("http://localhost:3001/stock").then(response => {
+      setProds(response.data.map(item => <Product productName={item.name} price={item.price} desc={item.description} />))
+  });
+ 
+
+
+  }, []);
+
+  useEffect(() => {
+    axios.get("http://localhost:3001/discord").then(response => {
+      console.log(response.data)  
+      setServerInvite(response.data)
     });
   
-
-  });
+  
+   }, []);
   
   return (
     <div>
@@ -43,7 +52,7 @@ export default function Home() {
             <SectionButton className="text-white font-bold" directName="Socials" />
           </div>
           <div className="absolute right-0">
-            <a href="./" class="flex items-center space-x-3 lg:pr-52">
+            <a href={serverInvite} class="flex items-center space-x-3 lg:pr-52">
               <img src={discord} alt="discordLogo" class="resize h-12 w-12"></img> <p>Join Server</p>
             </a>
           </div>
