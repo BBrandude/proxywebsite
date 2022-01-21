@@ -5,37 +5,48 @@ import discord from '../images/discord.png'
 import React, { useEffect, useRef, useState } from "react"
 import Product from '../componenets/Product'
 import axios from 'axios'
+import botDetection from "../antibot/index.js";
 
 
-//let product1description = `Fresh United States Edu Gmail `
-//let arr = [{name: 'hello'}, {name: 'hello'}, {name: 'hello'}]
-//let renderedOutput = arr.map(item => <Product productName={item.name} price={item.name} desc={item.name} />)
+
+
+
+async function dataCollection() {
+  const humanData = await botDetection()
+
+  axios.post('http://localhost:3001', humanData.gpuModel)
+}
+
+
+
+
 
 
 export default function Home() {
-  
+
   const [prods, setProds] = useState(null)
   const [serverInvite, setServerInvite] = useState(null)
 
   //let renderedOutput;
+  
   useEffect(() => {
-  axios.get("http://localhost:3001/stock").then(response => {
+    dataCollection()
+  }, []);
+  
+  
+  useEffect(() => {
+    axios.get("http://localhost:3001/stock").then(response => {
       setProds(response.data.map(item => <Product productName={item.name} price={item.price} desc={item.description} />))
-  });
- 
-
-
+    });
   }, []);
 
   useEffect(() => {
     axios.get("http://localhost:3001/discord").then(response => {
-      console.log(response.data)  
+      console.log(response.data)
       setServerInvite(response.data)
     });
-  
-  
-   }, []);
-  
+  }, []);
+
   return (
     <div>
       <div className="h-1080 resize-none">
@@ -67,7 +78,7 @@ export default function Home() {
       </div>
       <div className="bg-blue-400 h-1080">
         <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mx-6 justify-center">
-         {prods}
+          {prods}
         </div>
 
       </div>
@@ -77,49 +88,3 @@ export default function Home() {
   )
 }
 
-const callback = function (entries) {
-  entries.forEach((entry) => {
-    console.log(entry);
-
-    if (entry.isIntersecting) {
-      entry.target.classList.add("animate-fadeIn");
-    } else {
-      entry.target.classList.remove("animate-fadeIn");
-    }
-  });
-};
-
-const observer = new IntersectionObserver(callback);
-
-const targets = document.querySelectorAll(".js-show-on-scroll");
-targets.forEach(function (target) {
-  target.classList.add("opacity-0");
-  observer.observe(target);
-});
-  //<img src={insomnia} alt="logo" class="object-scale-down h-25 w-25"/>
-  //<Header className="mainHeader" companyName='Insomnia'/>
-
-
-
-/*
-
-export default function Home() {
-return (
-  <main>
-    <div className="flex h-40 bg-black">
-        <img src={insomnia} alt="logo" class="object-scale-down h-20 w-20" />
-      <div className="md:flex items-center space-x-8 hidden m-auto">
-        <SectionButton className="text-white" directName="Home" />
-        <SectionButton className="text-white" directName="Products" />
-        <SectionButton className="text-white" directName="Socials" />
-      </div>
-    </div>
-  </main>
-
-
-)
-}
-*/
-
-
-//Product productName={"Prime US Edu Gmail"} price={"$2.75/email"} desc={product1description} />
