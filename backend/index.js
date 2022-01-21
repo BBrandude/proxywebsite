@@ -8,9 +8,9 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cors())
 app.use(bodyParser.json())
 
-app.post('/', (req, res) => {
-    console.log(req.body)
-    res.send('products')
+app.get('/', (req, res) => {
+    //console.log(req.body)
+    res.send([{name: 'edu', price: '2.75', description:'good shit'}, {name: 'edu', price: '2.75', description:'good shit'}, {name: 'edu', price: '2.75', description:'good shit'}])
 })
 
 app.listen(apiPort, () => console.log(`Server running on port ${apiPort}`))

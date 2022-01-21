@@ -2,13 +2,31 @@ import Header from "../componenets/Header"
 import SectionButton from '../componenets/SectionButton';
 import insomnia from '../images/insomnia.svg';
 import discord from '../images/discord.png'
-import React from "react"
+import React, { useEffect, useRef, useState } from "react"
 import Product from '../componenets/Product'
+import axios from 'axios'
 
 
-let product1description = `Fresh United States Edu Gmail `
+//let product1description = `Fresh United States Edu Gmail `
+//let arr = [{name: 'hello'}, {name: 'hello'}, {name: 'hello'}]
+//let renderedOutput = arr.map(item => <Product productName={item.name} price={item.name} desc={item.name} />)
+
 
 export default function Home() {
+  
+  const [prods, setProds] = useState(null)
+  //let renderedOutput;
+  useEffect(() => {
+    
+    
+  axios.get("http://localhost:3001").then(response => {
+      console.log(response.data.map(item => <Product productName={item.name} price={item.name} desc={item.name} />))
+      setProds(response.data.map(item => <Product productName={item.name} price={item.name} desc={item.name} />))
+    });
+  
+
+  });
+  
   return (
     <div>
       <div className="h-1080 resize-none">
@@ -38,14 +56,9 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="bg-blue-400">
+      <div className="bg-blue-400 h-1080">
         <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mx-6 justify-center">
-          <Product productName={"Prime US Edu Gmail"} price={"$2.75/email"} desc={product1description} />
-          <Product productName={"Prime US Edu Gmail"} price={"$2.75/email"} desc={product1description} />
-          <Product productName={"Prime US Edu Gmail"} price={"$2.75/email"} desc={product1description} />
-          <Product productName={"Prime US Edu Gmail"} price={"$2.75/email"} desc={product1description} />
-          <Product productName={"Prime US Edu Gmail"} price={"$2.75/email"} desc={product1description} />
-          <Product productName={"Prime US Edu Gmail"} price={"$2.75/email"} desc={product1description} />
+         {prods}
         </div>
 
       </div>
@@ -98,3 +111,6 @@ return (
 )
 }
 */
+
+
+//Product productName={"Prime US Edu Gmail"} price={"$2.75/email"} desc={product1description} />
