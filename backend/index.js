@@ -18,6 +18,7 @@ app.get('/discord', (req, res) => {
     res.send('https://discord.gg/YvBpt3Dp8Q')
 })
 
+
 app.post('/', (req, res) => {
     console.log(req.body)
 })
