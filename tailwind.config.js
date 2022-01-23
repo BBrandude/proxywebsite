@@ -12,6 +12,8 @@ module.exports = {
       },
       height: {
         '1080': '1080px',
+        'hs': '20vh',
+        'hl': '80vh'
       },
       colors: {
         'neon-blue': "#2dfcfc",

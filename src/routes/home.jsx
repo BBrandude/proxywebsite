@@ -48,7 +48,7 @@ export default function Home() {
 
   return (
     <div>
-      <div className="h-1080 resize-none">
+      <div className="resize-none">
         <div className="flex-grow flex items-center scroll bg-black text-white h-1/6">
           <div className="flex items-center ml-8 item-">
             <a className="static items-stretch " href="./">
@@ -67,18 +67,18 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <div className="bg-black h-5/6 flex flex-row justify-center">
-          <div><h1 className="text-white">Insomnia Labs</h1></div>
-          <div className="grid gap-4">
+        <div className="bg-black h-hl flex">
+          <h1 className="text-white">Insomnia Labs</h1>
+          
 
             <div className="flex items-center space-x-14 m-auto relative">
               <LargeButton href="https://shoppy.gg/product/7mJJIsh" directName="Purchase" />
               <LargeButton directName={"Dashboard"} />
             </div>
           </div>
-        </div>
+        
       </div>
-      <div className="bg-blue-400 h-1080">
+      <div className="bg-blue-400 h-screen">
         <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mx-6 justify-center">
           {prods}
         </div>
