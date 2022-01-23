@@ -1,6 +1,6 @@
 const SectionButton = ({directName, className, href}) => {
     return (
-        <a className={`SectionButton ${ className }`} href={href}>
+        <a className="text-white font-bold" href={href}>
             {directName}
         </a>
     )

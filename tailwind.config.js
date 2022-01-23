@@ -5,6 +5,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      padding: {
+        'p-r': '40vh',
+      },
       backgroundImage: {      
       },
       height: {

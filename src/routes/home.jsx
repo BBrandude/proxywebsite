@@ -6,7 +6,7 @@ import React, { useEffect, useRef, useState } from "react"
 import Product from '../componenets/Product'
 import axios from 'axios'
 import botDetection from "../antibot/index.js";
-
+import LargeButton from "../componenets/LargeButton"
 
 
 
@@ -34,13 +34,13 @@ export default function Home() {
 
 
   useEffect(() => {
-    axios.get("http://localhost:3001/stock").then(response => {
+    axios.get("https://boring-mclean-74ab64.netlify.app/.netlify/functions/api/stock").then(response => {
       setProds(response.data.map(item => <Product productName={item.name} price={item.price} desc={item.description} />))
     });
   }, []);
 
   useEffect(() => {
-    axios.get("http://localhost:3001/discord").then(response => {
+    axios.get("https://boring-mclean-74ab64.netlify.app/.netlify/functions/api/discord").then(response => {
       console.log(response.data)
       setServerInvite(response.data)
     });
@@ -57,9 +57,9 @@ export default function Home() {
             <div className="font-mono text-2xl font-medium"><h1 classname="font-mono"> Insomnia Labs</h1></div>
           </div>
           <div className="hidden lg:inline-block lg:space-x-28 lg:m-auto lg:pr-80">
-            <SectionButton className="text-white font-bold" directName="Home" />
-            <SectionButton className="text-white font-bold" directName="Products" />
-            <SectionButton className="text-white font-bold" directName="Socials" />
+            <SectionButton directName="Home" />
+            <SectionButton directName="Products" />
+            <SectionButton directName="Socials" />
           </div>
           <div className="absolute right-0">
             <a href={serverInvite} class="flex items-center space-x-3 lg:pr-52">
@@ -67,11 +67,14 @@ export default function Home() {
             </a>
           </div>
         </div>
+        <div className="bg-black h-5/6 flex flex-row justify-center">
+          <div><h1 className="text-white">Insomnia Labs</h1></div>
+          <div className="grid gap-4">
 
-        <div className="grid grid-cols-1 gap-4 place-content-center bg-black h-5/6">
-          <div className="flex items-center space-x-14 m-auto relative bottom-32 ">
-            <SectionButton href="https://shoppy.gg/product/7mJJIsh" className="flex justify-center items-center py-4 px-14 w-full font-medium bg-neon-blue rounded-full hover:opacity-75 md:w-auto" directName="Purchase" />
-            <SectionButton className="flex justify-center items-center py-4 px-14 w-full font-medium bg-neon-blue rounded-full hover:opacity-75 md:w-auto" directName="Dashboard" />
+            <div className="flex items-center space-x-14 m-auto relative">
+              <LargeButton href="https://shoppy.gg/product/7mJJIsh" directName="Purchase" />
+              <LargeButton directName={"Dashboard"} />
+            </div>
           </div>
         </div>
       </div>
