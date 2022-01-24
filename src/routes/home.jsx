@@ -32,7 +32,6 @@ export default function Home() {
     dataCollection()
   }, []);
 
-
   useEffect(() => {
     axios.get("https://boring-mclean-74ab64.netlify.app/.netlify/functions/api/stock").then(response => {
       setProds(response.data.map(item => <Product productName={item.name} price={item.price} desc={item.description} />))
@@ -68,18 +67,21 @@ export default function Home() {
           </div>
         </div>
         <div className="bg-black h-hl flex">
-          <h1 className="text-white">Insomnia Labs</h1>
+          <div className="mx-auto my-auto">
+            <h1 className="text-white text-center text-3xl font-mono pb-5">Insomnia Labs</h1>
           
 
-            <div className="flex items-center space-x-14 m-auto relative">
+            <div className="flex space-x-14 m-auto">
               <LargeButton href="https://shoppy.gg/product/7mJJIsh" directName="Purchase" />
               <LargeButton directName={"Dashboard"} />
+            </div>
             </div>
           </div>
         
       </div>
-      <div className="bg-blue-400 h-screen">
-        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mx-6 justify-center">
+      <div className="bg-black h-screen">
+        <h1 className="text-white text-center text-4xl font-serif pt-6">Products</h1>
+        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mx-6 justify-center pt-6">
           {prods}
         </div>
 
