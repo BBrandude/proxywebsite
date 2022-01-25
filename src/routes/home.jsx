@@ -34,7 +34,7 @@ export default function Home() {
 
   useEffect(() => {
     axios.get("https://boring-mclean-74ab64.netlify.app/.netlify/functions/api/stock").then(response => {
-      setProds(response.data.map(item => <Product productName={item.name} price={item.price} desc={item.description} />))
+      setProds(response.data.map(item => <Product productName={item.name} price={"$" + item.price} desc={item.description} />))
     });
   }, []);
 
@@ -66,7 +66,7 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <div className="bg-black h-hl flex">
+        <div className="bg-black h-screen flex">
           <div className="mx-auto my-auto">
             <h1 className="text-white text-center text-3xl font-mono pb-5">Insomnia Labs</h1>
           
