@@ -1,6 +1,6 @@
 import Header from "../componenets/Header"
 import SectionButton from '../componenets/SectionButton';
-import insomnia from '../images/insomnia.svg';
+import insomnia from '../images/insomnia.png';
 import discord from '../images/discord.png'
 import React, { useEffect, useRef, useState } from "react"
 import Product from '../componenets/Product'

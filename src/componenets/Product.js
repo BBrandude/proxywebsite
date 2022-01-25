@@ -1,5 +1,5 @@
 import React from 'react'
-import insomnia from '../images/insomnia.svg'
+import insomnia from '../images/insomnia.png'
 
 const product = ({ productName, price, desc }) => {
     return (
