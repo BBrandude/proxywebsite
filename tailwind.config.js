@@ -7,7 +7,7 @@ module.exports = {
     extend: {
       padding: {
         'p-r': '40vh',
-        'plr' : '12vw'
+        'plr' : '18vw'
       },
       backgroundImage: {      
       },

@@ -66,12 +66,12 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <div className="bg-black h-screen flex">
+        <div className="bg-gradient-to-t from-black to-indigo-500 h-screen flex">
           <div className="mx-auto my-auto">
             <h1 className="text-white text-center text-3xl font-mono pb-5">Insomnia Labs</h1>
-          
+            <h3 className="text-white text-center text-xl font-mono pb-5">Satisfying Your Automation Needs</h3>
 
-            <div className="flex space-x-14 m-auto">
+            <div className="flex space-x-14 m-auto pb-plr">
               <LargeButton href="https://shoppy.gg/product/7mJJIsh" directName="Purchase" />
               <LargeButton directName={"Dashboard"} />
             </div>
