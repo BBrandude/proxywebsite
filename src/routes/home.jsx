@@ -80,7 +80,7 @@ export default function Home() {
         
       </div>
       <div className="bg-black h-screen">
-        <h1 className="text-white text-center text-4xl font-serif pt-6">Products</h1>
+        <h1 className="text-white text-center text-4xl font-serif pb-ptt">Products</h1>
         <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mx-6 justify-center pt-6">
           {prods}
         </div>
