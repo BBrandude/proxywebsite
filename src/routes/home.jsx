@@ -7,6 +7,7 @@ import Product from '../componenets/Product'
 import axios from 'axios'
 import botDetection from "../antibot/index.js";
 import LargeButton from "../componenets/LargeButton"
+import SocialsButton from "../componenets/SocialsButton";
 
 
 
@@ -85,6 +86,13 @@ export default function Home() {
           {prods}
         </div>
 
+      </div>
+      <div className="h-hm bg-blue-400">
+        <h1>Join our server for frequent giveaways and discounts. Follow us on twitter to stay up to date with the latest info</h1>
+        <div className="flex flex-col space-y-14 m-auto">
+          <SocialsButton/>
+          <SocialsButton/>
+        </div>
       </div>
     </div>
 

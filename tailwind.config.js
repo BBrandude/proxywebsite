@@ -19,6 +19,7 @@ module.exports = {
       height: {
         '1080': '1080px',
         'hs': '20vh',
+        'hm': '50vh',        
         'hl': '80vh'
       },
       colors: {
