@@ -79,8 +79,8 @@ export default function Home() {
           </div>
         
       </div>
-      <div className="bg-black h-screen">
-        <h1 className="text-white text-center text-4xl font-serif pb-ptt">Products</h1>
+      <div className="bg-black h-max pb-20">
+        <h1 className="text-white text-center text-4xl pb-ptt ">Products</h1>
         <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mx-6 justify-center pt-6">
           {prods}
         </div>
