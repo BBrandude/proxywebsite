@@ -2,6 +2,7 @@ import Header from "../componenets/Header"
 import SectionButton from '../componenets/SectionButton';
 import insomnia from '../images/insomnia.png';
 import discord from '../images/discord.png'
+import discord2 from '../images/discord2.png'
 import React, { useEffect, useRef, useState } from "react"
 import Product from '../componenets/Product'
 import axios from 'axios'
@@ -89,8 +90,8 @@ export default function Home() {
       </div>
       <div className="h-hm bg-blue-400">
         <h1>Join our server for frequent giveaways and discounts. Follow us on twitter to stay up to date with the latest info</h1>
-        <div className="flex flex-col space-y-14 m-auto">
-          <SocialsButton directName={'Discord'} socialsImage={discord}/>
+        <div className="flex flex-col space-y-14 pl-4 pt-4 m-auto">
+          <SocialsButton directName={'Discord'} socialsImage={discord2}/>
           <SocialsButton/>
         </div>
       </div>

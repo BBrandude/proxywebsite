@@ -23,7 +23,7 @@ module.exports = {
         'hl': '80vh'
       },
       colors: {
-        'chillSlate': "rgb(25, 26, 34)",
+        neutral: colors.neutral,
         'neon-blue': "#2dfcfc",
          cyan: colors.cyan,
       },
