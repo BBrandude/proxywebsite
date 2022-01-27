@@ -90,7 +90,7 @@ export default function Home() {
       <div className="h-hm bg-blue-400">
         <h1>Join our server for frequent giveaways and discounts. Follow us on twitter to stay up to date with the latest info</h1>
         <div className="flex flex-col space-y-14 m-auto">
-          <SocialsButton/>
+          <SocialsButton directName={'Discord'} socialsImage={discord}/>
           <SocialsButton/>
         </div>
       </div>
