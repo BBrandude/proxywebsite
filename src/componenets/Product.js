@@ -3,7 +3,7 @@ import insomnia from '../images/insomnia.png'
 
 const product = ({ productName, price, desc }) => {
     return (
-        <div className='flex flex-col bg-chillSlate rounded-2xl h-96 p-5 space-y-5'>
+        <div className='flex flex-col bg-gray-800 rounded-2xl h-96 p-5 space-y-5'>
             <div className="flex flex-row">
                 <img src={insomnia} className="rounded-xl resize h-20 w-20" alt="logo"></img>
 

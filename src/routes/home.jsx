@@ -3,6 +3,7 @@ import SectionButton from '../componenets/SectionButton';
 import insomnia from '../images/insomnia.png';
 import discord from '../images/discord.png'
 import discord2 from '../images/discord2.png'
+import twitter from '../images/twitter.png'
 import React, { useEffect, useRef, useState } from "react"
 import Product from '../componenets/Product'
 import axios from 'axios'
@@ -48,10 +49,10 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
+    <div className="scrollbar scrollbar-thumb-custom scrollbar-track-custom-light overflow-y-scroll">
       <div className="resize-none">
         <div className="flex-grow flex items-center scroll bg-black text-white h-1/6">
-          <div className="flex items-center ml-8 item-">
+          <div className="flex items-center ml-8">
             <a className="static items-stretch " href="./">
               <img src={insomnia} alt="logo" class="resize h-28 w-28" />
             </a>
@@ -81,18 +82,18 @@ export default function Home() {
           </div>
         
       </div>
-      <div className="bg-black h-max pb-20">
-        <h1 className="text-white text-center text-4xl pb-ptt ">Products</h1>
+      <div className="bg-gray-900 h-max pb-20">
+        <h1 className="text-white text-center text-4xl pb-ptt pt-5 ">Products</h1>
         <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mx-6 justify-center pt-6">
           {prods}
         </div>
 
       </div>
-      <div className="h-hm bg-blue-400">
-        <h1>Join our server for frequent giveaways and discounts. Follow us on twitter to stay up to date with the latest info</h1>
-        <div className="flex flex-col space-y-14 pl-4 pt-4 m-auto">
+      <div className="h-hm bg-black">
+        <h1 className="text-white text-lg font-bold pl-5 pt-3">Socials</h1>
+        <div className="flex flex-col space-y-10 pl-4 pt-4 m-auto">
           <SocialsButton directName={'Discord'} socialsImage={discord2}/>
-          <SocialsButton/>
+          <SocialsButton directName={'Twitter'} socialsImage={twitter}/>
         </div>
       </div>
     </div>

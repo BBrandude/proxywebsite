@@ -4,15 +4,12 @@ module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    fontFamily: {
-      'sans': ['Helvetica', 'Arial', 'sans-serif']
-    },
     extend: {
         
       padding: {
         'p-r': '40vh',
         'plr' : '18vw',
-        'ptt': '10vh'
+        'ptt': '8vh'
       },
       backgroundImage: {      
       },
@@ -23,6 +20,10 @@ module.exports = {
         'hl': '80vh'
       },
       colors: {
+        custom: {
+          DEFAULT: '#10B981',
+          light: '#D1FAE5'
+      },
         neutral: colors.neutral,
         'neon-blue': "#2dfcfc",
          cyan: colors.cyan,
@@ -38,9 +39,8 @@ module.exports = {
     }
    },
   },
-  variants: {
-    animation: ["motion-safe"],
-    extend: {},
-  },
-  plugins: [],
+  variants: {},
+  plugins: [
+    require('tailwind-scrollbar')
+  ],
 }
