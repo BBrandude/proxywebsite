@@ -78,9 +78,9 @@ export default function Home() {
               <LargeButton href="https://shoppy.gg/product/7mJJIsh" directName="Purchase" />
               <LargeButton directName={"Dashboard"} />
             </div>
-            </div>
           </div>
-        
+        </div>
+
       </div>
       <div className="bg-gray-900 h-max pb-20">
         <h1 className="text-white text-center text-4xl pb-ptt pt-5 ">Products</h1>
@@ -89,16 +89,16 @@ export default function Home() {
         </div>
 
       </div>
-      <div className="h-hm bg-black">
-        <h1 className="text-white text-lg font-bold pl-5 pt-3">Socials</h1>
-        <div className="flex flex-col space-y-10 pl-4 pt-4 m-auto">
-          <SocialsButton directName={'Discord'} socialsImage={discord2}/>
-          <SocialsButton directName={'Twitter'} socialsImage={twitter}/>
+      <div className="flex items-center justify-center h-hm bg-black">
+
+        <div className="flex flex-row space-x-10">
+          <h1 className="text-white text-lg font-bold pl-5 pt-3">Socials</h1>
+          <SocialsButton directName={'Twitter'} socialsImage={twitter} />
+          <SocialsButton directName={'Discord'} socialsImage={discord2} />
         </div>
+
       </div>
     </div>
-
-
   )
 }
 
