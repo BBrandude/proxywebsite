@@ -94,7 +94,7 @@ export default function Home() {
           <div className="resize-none flex flex-row space-x-10">
             <h1 className="text-white text-lg font-bold pl-5 pt-3">Socials</h1>
             <SocialsButton directName={'Twitter'} socialsImage={twitter} />
-            <SocialsButton directName={'Discord'} socialsImage={discord2} />
+            <SocialsButton directName={'Discord'} socialsImage={discord2} href={serverInvite} />
           </div>
         </div>
       </div>
