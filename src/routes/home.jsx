@@ -69,7 +69,7 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <div className="bg-gradient-to-t from-black to-indigo-500 h-screen flex">
+        <div className="bg-gradient-to-b from-black to-indigo-500 h-screen flex">
           <div className="mx-auto my-auto">
             <h1 className="text-white text-center text-3xl font-mono pb-5">Insomnia Labs</h1>
             <h3 className="text-white text-center text-xl font-mono pb-5">Satisfying Your Automation Needs</h3>
@@ -82,21 +82,21 @@ export default function Home() {
         </div>
 
       </div>
-      <div className="bg-gray-900 h-max pb-20">
+      <div className="bg-gradient-to-t from-black to-indigo-500 h-max pb-20">
         <h1 className="text-white text-center text-4xl pb-ptt pt-5 ">Products</h1>
         <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mx-6 justify-center pt-6">
           {prods}
         </div>
 
       </div>
-      <div className="flex items-center justify-center h-hm bg-black">
-
+      <div className="flex items-center justify-center h-hm bg-gradient-to-b from-black to-indigo-500">
+<div className="bg-indigo-600 rounded-2xl px-20 py-20">
         <div className="flex flex-row space-x-10">
           <h1 className="text-white text-lg font-bold pl-5 pt-3">Socials</h1>
           <SocialsButton directName={'Twitter'} socialsImage={twitter} />
           <SocialsButton directName={'Discord'} socialsImage={discord2} />
         </div>
-
+</div>
       </div>
     </div>
   )
