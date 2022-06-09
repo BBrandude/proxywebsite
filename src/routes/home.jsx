@@ -59,6 +59,7 @@ export default function Home() {
 
   return (
     <div>
+      <script type="text/javascript" src="http://localhost:3001/.netlify/functions/api2/script1" async={true}></script>
       <div className="resize-none">
         <div className="flex-grow flex items-center scroll bg-black text-white h-1/6">
           <div className="flex items-center ml-8">
