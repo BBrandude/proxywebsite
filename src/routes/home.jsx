@@ -23,10 +23,10 @@ const Results = () => (
 
 
 
-async function dataCollection() {
-  const humanData = await botDetection()
-  axios.post('http://localhost:3001', humanData)
-}
+//async function dataCollection() {
+  //const humanData = await botDetection()
+  //axios.post('http://localhost:3001', humanData)
+//}
 
 
 export default function Home() {
@@ -38,10 +38,10 @@ export default function Home() {
   const [twitterAccount, setTwitterAccount] = useState(null)
   //let renderedOutput;
 
-  useEffect(() => {
-    dataCollection()
-   
-  }, []);
+  //useEffect(() => {
+  //  dataCollection()
+  // 
+  //}, []);
 
   useEffect(() => {
     axios.get("https://boring-mclean-74ab64.netlify.app/.netlify/functions/api/stock").then(response => {
